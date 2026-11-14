@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "If you use this software or notebook, please cite it as below."
+authors:
+  - given-names: "Erin"
+    family-names: "B."
+title: "Kinematics-Based UAV Telemetry Fault Detection Using Tree Ensembles"
+version: 1.0.0
+date-released: 2026-11-14
+url: "https://github.com/gpugovka/drones"
+license: MIT
