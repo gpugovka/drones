@@ -40,10 +40,10 @@ Rather than training on raw single-axis sensor readings, seven rotation-invarian
   $$\omega_{\text{total}} = \sqrt{\text{abGyrX}^2 + \text{abGyrY}^2 + \text{abGyrZ}^2}$$
 * **Total Magnetic Field Strength:** Overall ambient magnetic magnitude to detect compass/navigation anomalies:
   $$B_{\text{total}} = \sqrt{\text{MagX}^2 + \text{MagY}^2 + \text{MagZ}^2}$$
-* **Attitude Tracking Errors:** Difference between desired (`Des*`) and actual measured angles, with modular wrapping on Yaw ($[0^\circ, 360^\circ] \rightarrow [-180^\circ, 180^\circ]$) to prevent false $360^\circ$ boundary spikes:
+* **Attitude Tracking Errors:** Difference between desired (`Des*`) and actual measured angles, with modular wrapping on Yaw ($[0^\circ, 360^\circ] \to [-180^\circ, 180^\circ]$) to prevent false $360^\circ$ boundary spikes:
   $$\text{Error}_{\text{Roll}} = \text{DesRoll} - \text{Roll}$$
   $$\text{Error}_{\text{Pitch}} = \text{DesPitch} - \text{Pitch}$$
-  $$\text{Error}_{\text{Yaw}} = ((\text{DesYaw} - \text{Yaw} + 180) \bmod 360) - 180$$
+  $$\text{Error}_{\text{Yaw}} = ((\text{DesYaw} - \text{Yaw} + 180) \pmod{360}) - 180$$
 * **Combined Roll-Pitch Error (`ErrRP`):** Flight controller attitude tracking error indicator.
 
 ---
