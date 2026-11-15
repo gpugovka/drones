@@ -91,6 +91,25 @@ Evaluated on an 80/20 stratified/shuffled train-test split (`2,451` unseen test 
 
 ---
 
+## Evaluation Metrics
+
+For each class $c \in \{0, 1, 2, 3, 4\}$ with true positives ($TP_c$), false positives ($FP_c$), false negatives ($FN_c$), and total test samples $N = 2{,}451$:
+
+* **Overall Accuracy:**
+  $$\text{Accuracy} = \frac{\sum_{c=0}^{4} TP_c}{N}$$
+
+* **Per-Class Precision ($P_c$) & Recall ($R_c$):**
+  $$P_c = \frac{TP_c}{TP_c + FP_c}, \quad R_c = \frac{TP_c}{TP_c + FN_c}$$
+
+* **Per-Class & Macro F1-Score:**
+  $$F_{1,c} = \frac{2 P_c R_c}{P_c + R_c}, \quad \text{Macro } F_1 = \frac{1}{5}\sum_{c=0}^{4} F_{1,c}$$
+
+* **Per-Class & Macro PR-AUC (Average Precision):**
+  $$\text{AP}_c = \sum_n (R_{c,n} - R_{c,n-1}) P_{c,n}, \quad \text{Macro PR-AUC} = \frac{1}{5}\sum_{c=0}^{4} \text{AP}_c$$
+  where $P_{c,n}$ and $R_{c,n}$ are the precision and recall of class $c$ at probability threshold $n$.
+
+---
+
 ## References
 
 1. **Dataset Reference:** [https://doi.org/10.3390/app13074301](https://doi.org/10.3390/app13074301)
