@@ -102,10 +102,13 @@ For each class $c \in \{0, 1, 2, 3, 4\}$ with true positives ($TP_c$), false pos
   $$P_c = \frac{TP_c}{TP_c + FP_c}, \quad R_c = \frac{TP_c}{TP_c + FN_c}$$
 
 * **Per-Class & Macro F1-Score:**
+  
   $$F_{1,c} = \frac{2 P_c R_c}{P_c + R_c}, \quad \text{Macro } F_1 = \frac{1}{5}\sum_{c=0}^{4} F_{1,c}$$
 
 * **Per-Class & Macro PR-AUC (Average Precision):**
+  
   $$\text{AP}_c = \sum_n (R_{c,n} - R_{c,n-1}) P_{c,n}, \quad \text{Macro PR-AUC} = \frac{1}{5}\sum_{c=0}^{4} \text{AP}_c$$
+  
   where $P_{c,n}$ and $R_{c,n}$ are the precision and recall of class $c$ at probability threshold $n$.
 
 ---
