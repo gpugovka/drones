@@ -107,7 +107,9 @@ For each class $c \in \{0, 1, 2, 3, 4\}$ with true positives ($TP_c$), false pos
 
 * **Per-Class & Macro PR-AUC (Average Precision):**
   
-  $$\text{AP}_c = \sum_n (R_{c,n} - R_{c,n-1}) P_{c,n}, \quad \text{Macro PR-AUC} = \frac{1}{5}\sum_{c=0}^{4} \text{AP}_c$$
+  $$\text{AP}_c = \sum_n (R_{c,n} - R_{c,n-1}) P_{c,n}$$
+  
+  $$\quad \text{Macro PR-AUC} = \frac{1}{5}\sum_{c=0}^{4} \text{AP}_c$$
   
   where $P_{c,n}$ and $R_{c,n}$ are the precision and recall of class $c$ at probability threshold $n$.
 
